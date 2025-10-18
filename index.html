@@ -18,30 +18,41 @@
     <title>Phillantech - Philip Okposo - Data Analyst Trainer</title>
   </head>
   <nav class="fixed-nav">
-  <div class="mobile-nav-header">
-    <span class="mobile-nav-title">Philip Okposo | The Naija Dataman</span>
-    <button id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-  </div>
-
-  <div id="nav-links">
-    <a href="#home" class="active">Home</a>
-    <a href="#about">About</a>
-    <div class="dropdown" tabindex="0">
-      <a href="#work" class="dropbtn dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-        My Work <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-      </a>
-      <div class="dropdown-content" role="menu" aria-label="My Work menu">
-        <a id="experience-nav" href="#experience" role="menuitem">Experience</a>
-      </div>
+    <div class="mobile-nav-header">
+      <span class="mobile-nav-title">Philip Okposo | The Naija Dataman</span>
+      <button
+        id="hamburger-btn"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
-    <a href="#certificates">Certificates</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
 
-<div id="nav-overlay"></div>
+    <div id="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <div class="dropdown" tabindex="0">
+        <a
+          href="#work"
+          class="dropbtn dropdown-toggle"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          My Work <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-content" role="menu" aria-label="My Work menu">
+          <a id="experience-nav" href="#experience" role="menuitem"
+            >Experience</a
+          >
+        </div>
+      </div>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div id="nav-overlay"></div>
   <main>
     <section id="home">
       <h1 class="eyecatcher">Philip Okposo</h1>
@@ -336,7 +347,7 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE (new timeline section) -->
+    <!-- EXPERIENCE -->
     <section id="experience" aria-label="Professional Experience">
       <div class="section-inner">
         <header class="section-header">
@@ -346,8 +357,21 @@
 
         <div class="timeline">
           <div class="timeline-line" aria-hidden="true"></div>
-
           <div class="timeline-item">
+            <div class="timeline-date">2023</div>
+            <div class="timeline-content">
+              <h4>Business Intelligence Training – NDIC</h4>
+              <p class="muted">
+                BI training for NDIC professionals improving reporting and
+                analytical skills
+              </p>
+              <p class="impact">
+                Impact: Reporting, risk analysis & better attitude towards data,
+                took a hike.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item alt">
             <div class="timeline-date">2024 —> Present</div>
             <div class="timeline-content">
               <h4>Adjunct Lecturer — Pan-Atlantic University</h4>
@@ -362,8 +386,8 @@
             </div>
           </div>
 
-          <div class="timeline-item alt">
-            <div class="timeline-date">2022 —> Present</div>
+          <div class="timeline-item">
+            <div class="timeline-date">2024 —> Present</div>
             <div class="timeline-content">
               <h4>
                 Lecturer — Nigerian University of Technology & Management (NUTM)
@@ -379,8 +403,8 @@
             </div>
           </div>
 
-          <div class="timeline-item">
-            <div class="timeline-date">2021</div>
+          <div class="timeline-item alt">
+            <div class="timeline-date">2024</div>
             <div class="timeline-content">
               <h4>Lead Trainer — NLNG (Contract)</h4>
               <p class="muted">
@@ -389,21 +413,6 @@
               <p class="impact">
                 Impact: Enabled stakeholders to adopt dashboard-driven KPI
                 tracking.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item alt">
-            <div class="timeline-date">2019 —> 2021</div>
-            <div class="timeline-content">
-              <h4>Training Consultant — Leadway</h4>
-              <p class="muted">
-                Designed upskilling curriculum for analytics and reporting
-                teams.
-              </p>
-              <p class="impact">
-                Impact: Reduced manual reporting time by ~40% through automation
-                training.
               </p>
             </div>
           </div>
@@ -422,10 +431,25 @@
               </p>
             </div>
           </div>
+
+          <div class="timeline-item alt">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-content">
+              <h4>Training Consultant — Leadway</h4>
+              <p class="muted">
+                Designed upskilling curriculum for analytics and reporting
+                teams.
+              </p>
+              <p class="impact">
+                Impact: Reduced manual reporting time by ~40% through automation
+                training.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <!-- Certificates Section -->
+    <!-- CERTIFICATES -->
     <section id="certificates" class="section-bg">
       <div class="section-inner cert-inner">
         <header class="section-header">
@@ -621,30 +645,43 @@
       </div>
     </section>
   </main>
-<script>
-  const hamburgerBtn = document.getElementById('hamburger-btn');
-  const navLinks = document.getElementById('nav-links');
-  const navOverlay = document.getElementById('nav-overlay');
-  const body = document.body;
+  <script>
+    const hamburgerBtn = document.getElementById("hamburger-btn");
+    const navLinks = document.getElementById("nav-links");
+    const navOverlay = document.getElementById("nav-overlay");
+    const body = document.body;
 
-  function toggleNav() {
-    body.classList.toggle('nav-open');
-    const isNavOpen = body.classList.contains('nav-open');
-    hamburgerBtn.setAttribute('aria-expanded', isNavOpen);
-  }
-
-  hamburgerBtn.addEventListener('click', toggleNav);
-
-  navOverlay.addEventListener('click', toggleNav);
-
-
-  navLinks.addEventListener('click', (event) => {
-    if (event.target.tagName === 'A') {
-      toggleNav();
+    // toggle the navigation's visibility
+    function toggleNav() {
+      body.classList.toggle("nav-open");
+      const isNavOpen = body.classList.contains("nav-open");
+      hamburgerBtn.setAttribute("aria-expanded", isNavOpen);
     }
-  });
-</script>
-</body>
+
+    // --- START: EVENT LISTENER ---
+    function handleNavClick(event) {
+      const link = event.target.closest("a");
+
+      if (link && link.hash) {
+        event.preventDefault();
+        const targetElement = document.querySelector(link.hash);
+
+        if (targetElement) {
+          toggleNav();
+
+          setTimeout(() => {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+            });
+          }, 300);
+        }
+      }
+    }
+
+    hamburgerBtn.addEventListener("click", toggleNav);
+    navOverlay.addEventListener("click", toggleNav);
+    navLinks.addEventListener("click", handleNavClick);
+  </script>
   <footer>
     <div id="foot-links">
       <ul>
