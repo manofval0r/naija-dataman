@@ -1436,13 +1436,8 @@ footer div p:last-child{
   }
 
   /* Contact */
-  .contact-inner{
-    width:auto;
-    padding: auto;
-  }
-
   form input{
-    max-width: 80%;
+    width: auto;
   }
   .contact-left{
     display: none;
@@ -1451,12 +1446,17 @@ footer div p:last-child{
     display: flex;
     flex-direction: column;
     gap: 40px;
+    width:auto;
+    padding: auto;
   }
 
   form {
-    width: 200px;
+    width: auto;
   }
 
+  #about{
+    padding: 5px;
+  }
   /* TIMELINE ADJUSTMENTS */
   .timeline-line {
     left: 20px;
