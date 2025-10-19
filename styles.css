@@ -12,7 +12,9 @@
     --font-subheading: 'Electrolize', sans-serif;
     --font-body: 'Inter', sans-serif;
   }
-
+html{
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   height: 100%;
@@ -1357,6 +1359,7 @@ footer div p:last-child{
     pointer-events: none;
     transition: opacity 0.35s ease;
     z-index: 1040;
+    pointer-events: none;
   }
 
   body.nav-open #nav-links {
